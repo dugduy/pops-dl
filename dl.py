@@ -2,7 +2,7 @@ from subprocess import run
 run('@echo off&title Download Widevine video pops.vn',shell=1)
 mpd_url=input('Mpd url: ')
 print('Downloading...')
-run('yt-dlp -f f1-a1,f2-v1 %s --allow-u -o a'%mpd_url)
+run('yt-dlp -f f1-a1,f2-v1 %s --allow-u'%mpd_url)
 print('Decrypting...')
 run('mp4decrypt --key 509ff87e5c905222895cefb94f4a7afd:be7e251f461f44a5e1602ce9c2966b17 index [index].mp4 video.mp4')
 run('mp4decrypt --key 509ff87e5c905222895cefb94f4a7afd:be7e251f461f44a5e1602ce9c2966b17 index [index].m4a audio.m4a')
